@@ -15,6 +15,7 @@ from mealie.services.migrations import (
     MealieAlphaMigrator,
     NextcloudMigrator,
     PaprikaMigrator,
+    MyCookBookMigrator,
 )
 
 router = UserAPIRouter(prefix="/groups/migrations", tags=["Group: Migrations"])
@@ -48,6 +49,7 @@ class GroupMigrationController(BaseUserController):
             SupportedMigrations.mealie_alpha: MealieAlphaMigrator,
             SupportedMigrations.nextcloud: NextcloudMigrator,
             SupportedMigrations.paprika: PaprikaMigrator,
+            SupportedMigrations.myCookBook: MyCookBookMigrator,
         }
 
         constructor = table.get(migration_type, None)

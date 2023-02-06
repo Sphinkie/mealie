@@ -6,7 +6,7 @@
 */
 
 export type WebhookType = "mealplan";
-export type SupportedMigrations = "nextcloud" | "chowdown" | "paprika" | "mealie_alpha";
+export type SupportedMigrations = "nextcloud" | "chowdown" | "paprika" | "mealie_alpha" | "myCookBook";
 
 export interface CreateGroupPreferences {
   privateGroup?: boolean;

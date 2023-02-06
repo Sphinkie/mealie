@@ -76,6 +76,7 @@ const MIGRATIONS = {
   chowdown: "chowdown",
   paprika: "paprika",
   mealie: "mealie_alpha",
+  myCookBook: "myCookBook",
 };
 
 export default defineComponent({
@@ -110,7 +111,10 @@ export default defineComponent({
         text: "Mealie",
         value: MIGRATIONS.mealie,
       },
-    ];
+      {
+        text: "myCookBook",
+        value: MIGRATIONS.myCookBook,
+      },    ];
 
     const _content = {
       [MIGRATIONS.nextcloud]: {
@@ -235,6 +239,10 @@ export default defineComponent({
             ],
           },
         ],
+      },
+	    [MIGRATIONS.myCookBook]: {
+        text: "Mealie can import recipes from the myCookBook application. Export your recipes from myCookBook, rename the export extension to .zip and upload it below.",
+        tree: false,
       },
     };
 
